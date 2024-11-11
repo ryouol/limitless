@@ -13,7 +13,9 @@ body, html {
 }
 
 .landing-page {
+  padding-top: 60px; /* Offset for fixed toolbar height */
   text-align: center;
+  padding-bottom: 60px; /* Add padding to prevent overlap with fixed footer */
 }
 
 .logo {
@@ -70,22 +72,114 @@ body, html {
 
 
 /* Tool / Menu Bar Styling */
-
 .toolbar {
-  display: flex;
-  justify-content: center;
-  background-color: #000; /* Match background color of landing page */
-  padding: 10px;
+  position: fixed; /* Keep it fixed at the top */
+  top: 0;
+  left: 0; /* Align to the left */
+  width: 100%;
+  background-color: #000;
+  padding: 10px 20px; /* Add padding for some space on the left */
   font-size: 16px;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  z-index: 1000;
 }
 
 .toolbar-link {
-  color: #fff; /* White color for links */
-  margin: 0 15px; /* Spacing between links */
-  text-decoration: none; /* Remove underline */
+  color: #fff;
+  margin: 0 15px; /* Space between links */
+  text-decoration: none;
   transition: color 0.3s;
 }
 
 .toolbar-link:hover {
   color: #b3b3b3; /* Subtle hover effect */
+}
+
+
+
+
+/*Footer*/
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; /* Ensure it spans the entire width */
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.who-we-are {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh; /* Ensures the page takes the full viewport height */
+}
+
+.team-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff; /* White text for the title */
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.team-member {
+  background-color: #1a1a1a; /* Dark background for each profile box */
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); /* Light shadow for contrast */
+  text-align: left;
+  color: #fff; /* White text for member info */
+}
+
+.team-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #007bff; /* Adjust color as needed */
+}
+
+.team-info {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff; /* White text for info */
+}
+
+.team-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+  color: #fff; /* White text for names */
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d3d3d3; /* Light grey for readability */
 }
