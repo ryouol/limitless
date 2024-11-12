@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import WhoWeAre from './components/WhoWeAre';
+import LearnMore from './components/LearnMore';
 
 const App = () => {
     return (
@@ -9,7 +10,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/who-we-are" element={<WhoWeAre />} />
-                {/* Add other routes as needed */}
+                <Route path="/learn-more" element={<LearnMore />} />
             </Routes>
         </Router>
     );
