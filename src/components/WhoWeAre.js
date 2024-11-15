@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles.css';
-import jackyImage from './jacky.jpg'; 
+import jackyImage from './jacky.jpg';
 import royImage from './roy.JPG';
 
 const WhoWeAre = () => {
