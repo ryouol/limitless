@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Toolbar from './Toolbar';
 import Footer from './footer.js';
 import '../styles.css';
-import logo from './logo.png';
-import LimitlessInvestment from './LimitlessInvestment';
+import logo from '../assets/logo.png';
+import LimitlessInvestment from './LimitlessInvestment.js';
 
 const LandingPage = () => {
     return (

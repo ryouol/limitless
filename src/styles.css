@@ -710,3 +710,28 @@ p {
     padding: 6px 12px;
   }
 }
+
+
+
+.fund-logo img {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Maintain a square aspect ratio */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits well inside the circular frame */
+}
+
+
+.fund-view-button {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.fund-view-button:hover {
+  background: #f3f4f6;
+  color: #374151;
+}

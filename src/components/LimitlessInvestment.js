@@ -1,6 +1,11 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 import { LineChart, Line, ResponsiveContainer } from 'recharts';
 import { Plus, ArrowRightLeft, BarChart2 } from 'lucide-react';
+import sequoiaLogo from '../assets/companies/sequoia-capital.png';
+import andreessenLogo from '../assets/companies/andreessen-horowitz.png';
+import benchmarkLogo from '../assets/companies/benchmark.png';
+import '../styles.css';
 
 const LimitlessInvestment = () => {
   const performanceData = [
@@ -13,19 +18,19 @@ const LimitlessInvestment = () => {
       name: 'Sequoia Capital',
       fund: 'Fund XXIV',
       amount: '$42.5K',
-      logo: '/api/placeholder/32/32'
+      logo: sequoiaLogo
     },
     {
       name: 'Andreessen Horowitz',
       fund: 'Growth Fund III',
       amount: '$38.2K',
-      logo: '/api/placeholder/32/32'
+      logo: andreessenLogo
     },
     {
       name: 'Benchmark',
       fund: 'Fund X',
       amount: '$31.6K',
-      logo: '/api/placeholder/32/32'
+      logo: benchmarkLogo
     }
   ];
 
@@ -34,7 +39,7 @@ const LimitlessInvestment = () => {
       <div className="dashboard-container">
         {/* Header */}
         <div className="dashboard-header">
-          <img src="/api/placeholder/32/32" alt="LimitLess Logo" className="dashboard-logo" />
+          <img src={logo} alt="Limitless Logo" className="logo" style={{ width: '120px', height: 'auto' }} />
         </div>
 
         {/* Total Capital */}
@@ -79,27 +84,31 @@ const LimitlessInvestment = () => {
 
         {/* Portfolio Funds */}
         <div className="portfolio-funds">
-          <h2 className="fund-label">PORTFOLIO FUNDS</h2>
-          <div className="fund-list">
-            {portfolioFunds.map((fund, index) => (
-              <div key={index} className="fund-item">
-                <div className="fund-logo">
-                  <img src={fund.logo} alt={fund.name} />
-                </div>
-                <div className="fund-details">
-                  <div className="fund-name">{fund.name}</div>
-                  <div className="fund-fund">{fund.fund}</div>
-                </div>
-                <div className="fund-amount">
-                  <div>{fund.amount}</div>
-                  <button className="fund-view">
-                    View recent activities and investments
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+  <h2 className="fund-label">PORTFOLIO FUNDS</h2>
+  <div className="fund-list">
+    {portfolioFunds.map((fund, index) => (
+      <div key={index} className="fund-item">
+        {/* Logo */}
+        <div className="fund-logo">
+          <img src={fund.logo} alt={fund.name} />
         </div>
+        {/* Fund Details */}
+        <div className="fund-details">
+          <div className="fund-name">{fund.name}</div>
+          <div className="fund-fund">{fund.fund}</div>
+        </div>
+        {/* Fund Amount */}
+        <div className="fund-amount">
+          <div>{fund.amount}</div>
+          <button className="action-button fund-view-button">
+            <span> View Details </span>
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* Upcoming Fund Access */}
         <div className="upcoming-fund">

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles.css';
-import jackyImage from './jacky.jpg';
-import royImage from './roy.JPG';
+import jackyImage from '../assets/jacky.jpg';
+import royImage from '../assets/roy.JPG';
 
 const WhoWeAre = () => {
     return (
