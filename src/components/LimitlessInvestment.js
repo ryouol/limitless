@@ -99,9 +99,9 @@ const LimitlessInvestment = () => {
         </div>
         {/* Fund Amount */}
         <div className="fund-amount">
-          <div>{fund.amount}</div>
+          <div className="amount-value">{fund.amount}</div>
           <button className="action-button fund-view-button">
-            <span> View Details </span>
+            <span>View Details</span>
           </button>
         </div>
       </div>
@@ -113,13 +113,17 @@ const LimitlessInvestment = () => {
         {/* Upcoming Fund Access */}
         <div className="upcoming-fund">
           <h2 className="fund-label">UPCOMING FUND ACCESS</h2>
-          <div className="fund-item">
+          <div className="fund-item upcoming">
             <div className="fund-details">
               <div className="fund-name">Accel Partners</div>
               <div className="fund-fund">Growth Fund VII</div>
               <div className="fund-min-investment">Minimum Investment: $25K</div>
             </div>
-            <div className="fund-status">Opening Soon</div>
+            <div className="fund-amount">
+              <button className="action-button fund-view-button">
+                <span>Opening Soon</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
