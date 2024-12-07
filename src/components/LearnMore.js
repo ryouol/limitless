@@ -28,6 +28,6 @@ const LearnMore = () => {
             </section>
         </div>
     );
-};
+};                         
 
-export default LearnMore;
+export default LearnMore;    

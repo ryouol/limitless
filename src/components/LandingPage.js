@@ -26,6 +26,19 @@ const LandingPage = () => {
                     <div className="scroll-arrow">↓</div>
                 </div>
             </div>
+            
+            {/* Figma Presentation Section */}
+            <div className="figma-presentation">
+                <iframe 
+                    title="LimitLess Pitch"
+                    style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+                    width="800"
+                    height="450"
+                    src="https://embed.figma.com/slides/HkfH1GQrIg4rhhRXGipBOY/LimitLess-Pitch?node-id=10-19&embed-host=share"
+                    allowFullScreen
+                />
+            </div>
+
             <div className="investment-section">
                 <LimitlessInvestment />
             </div>
